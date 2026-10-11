@@ -1,0 +1,147 @@
+/* CarePilot AI — Medicine Scanner Styles */
+
+.scanner-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Real Camera Viewport Styles */
+.cam-view {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #030a14;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.cam-view video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cam-guide {
+  position: absolute;
+  inset: 15% 25%;
+  border: 2px solid #35D6E8;
+  border-radius: 16px;
+  box-shadow: 0 0 0 9999px rgba(3, 10, 20, 0.45);
+  pointer-events: none;
+}
+
+.cam-empty {
+  text-align: center;
+  color: #9CAEC4;
+  padding: 24px;
+  max-width: 420px;
+}
+
+.cam-err {
+  color: #F5B942;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cam-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .cam-view {
+    aspect-ratio: 3/4;
+  }
+}
+
+/* Image Capture Preview & Processing Stepper */
+.scan-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.scan-preview-box {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  background: #030a14;
+}
+
+.scan-preview-img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+}
+
+.scan-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.scan-step-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--color-surface-raised);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  transition: all 200ms ease;
+}
+
+.scan-step-item.active {
+  border-color: var(--color-cyan);
+  color: var(--color-text);
+  background: rgba(53, 214, 232, 0.08);
+}
+
+.scan-step-item.done {
+  border-color: rgba(34, 197, 94, 0.4);
+  color: var(--color-success);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+/* Result Cards & Confidence Progress */
+.medicine-result-card {
+  border-left: 4px solid var(--color-cyan);
+}
+
+.confidence-bar-container {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.confidence-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #35D6E8, #22C55E);
+  transition: width 400ms ease;
+}

@@ -1,0 +1,54 @@
+/* CarePilot AI — Health Summary Styles */
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.sparkline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.sparkline-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 16px 20px;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.question-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: var(--color-surface-raised);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  gap: var(--space-3);
+}
+
+.followup-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.followup-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: var(--color-surface-raised);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}

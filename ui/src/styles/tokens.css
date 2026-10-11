@@ -1,0 +1,171 @@
+/* CarePilot AI — Design Tokens */
+:root {
+  /* Colors */
+  --color-bg: #07111F;
+  --color-surface: #101D30;
+  --color-surface-raised: #162640;
+  --color-surface-glass: rgba(16, 29, 48, 0.72);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.16);
+  --color-border-active: rgba(53, 214, 232, 0.4);
+
+  --color-cyan: #35D6E8;
+  --color-violet: #8B7CFF;
+  --color-cyan-glow: rgba(53, 214, 232, 0.25);
+  --color-violet-glow: rgba(139, 124, 255, 0.25);
+
+  --color-text: #F4F7FC;
+  --color-text-muted: #9CAEC4;
+  --color-text-subtle: #62758F;
+
+  --color-success: #36D399;
+  --color-success-bg: rgba(54, 211, 153, 0.12);
+  --color-success-border: rgba(54, 211, 153, 0.3);
+
+  --color-warning: #F5B942;
+  --color-warning-bg: rgba(245, 185, 66, 0.12);
+  --color-warning-border: rgba(245, 185, 66, 0.3);
+
+  --color-critical: #FF647C;
+  --color-critical-bg: rgba(255, 100, 124, 0.12);
+  --color-critical-border: rgba(255, 100, 124, 0.3);
+
+  --color-neutral-badge: rgba(156, 174, 196, 0.15);
+  --color-neutral-border: rgba(156, 174, 196, 0.25);
+
+  /* Gradient: Reserved for primary CTA, logo & key numbers */
+  --gradient-primary: linear-gradient(135deg, #35D6E8 0%, #8B7CFF 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+  /* Typography */
+  --font-family-ui: 'Inter', 'Noto Sans Telugu', 'Noto Sans Devanagari', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 20px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.7;
+
+  /* Spacing: 4px base */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 16px var(--color-cyan-glow);
+
+  /* Layout */
+  --sidebar-width: 248px;
+  --sidebar-collapsed-width: 76px;
+  --topbar-height: 64px;
+  --content-max-width: 1280px;
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+}
+
+/* Accessibility overrides */
+body.font-lg {
+  --font-size-xs: 14px;
+  --font-size-sm: 16px;
+  --font-size-base: 18px;
+  --font-size-md: 22px;
+  --font-size-lg: 26px;
+  --font-size-xl: 34px;
+}
+
+body.font-xl {
+  --font-size-xs: 16px;
+  --font-size-sm: 18px;
+  --font-size-base: 20px;
+  --font-size-md: 24px;
+  --font-size-lg: 28px;
+  --font-size-xl: 36px;
+}
+
+body.high-contrast {
+  --color-bg: #000000;
+  --color-surface: #0a0a0a;
+  --color-surface-raised: #141414;
+  --color-border: #ffffff;
+  --color-border-hover: #35D6E8;
+  --color-text: #FFFFFF;
+  --color-text-muted: #E2E8F0;
+  --color-text-subtle: #CBD5E1;
+  --color-cyan: #38e1f5;
+  --color-violet: #a295ff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body.reduced-motion *, body.reduced-motion *::before, body.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Base Reset & Core Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-ui);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Number display with tabular numbers */
+.num, .tabular, [data-tabular="true"] {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Focus visibility for WCAG AA */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}

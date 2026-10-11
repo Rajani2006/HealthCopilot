@@ -1,0 +1,21 @@
+# Environment files (keep .env.example tracked)
+.env
+.env.*
+!.env.example
+
+# Uploads directory
+uploads/
+
+# SQLite Database
+carepilot.db
+
+# Virtual environments
+.venv/
+venv/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+
+# Node dependencies
+node_modules/

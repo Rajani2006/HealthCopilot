@@ -1,0 +1,54 @@
+/* CarePilot AI — Report Analysis Styles */
+
+.analysis-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.analysis-header-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.analysis-two-pane {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Mobile Pane Switcher */
+.pane-switcher {
+  display: none;
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 1024px) {
+  .analysis-two-pane {
+    grid-template-columns: 1fr;
+  }
+
+  .pane-switcher {
+    display: flex;
+  }
+
+  .analysis-pane-left.mobile-hidden,
+  .analysis-pane-right.mobile-hidden {
+    display: none;
+  }
+}
+
+.analysis-action-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.table-row-hover:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}

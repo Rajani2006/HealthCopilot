@@ -1,0 +1,57 @@
+# Environment files (keep .env.example tracked)
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Build Outputs
+dist/
+**/dist/
+dist-ssr/
+build/
+
+# Uploads & User data
+uploads/
+**/uploads/
+carepilot-backend/uploads/
+
+# SQLite & local databases
+carepilot.db
+**/carepilot.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Python bytecode & cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+**/.venv/
+venv/
+**/venv/
+ENV/
+env/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
